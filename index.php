@@ -1,3 +1,8 @@
+<?php
+require "koneksi.php";
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +22,7 @@
             <div class="card-header">
                 <nav class="navbar bg-body-tertiary">
                     <div class="container-fluid">
-                        <a class="navbar-brand">CRUD Data Mahasiswa</a>
+                        <a class="navbar-brand">Data Mahasiswa Universitas Muhammadiyah Tangerang</a>
                         <form class="d-flex" role="search">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-outline-success" type="submit">Cari</button>
@@ -25,9 +30,11 @@
                     </div>
                 </nav>
             </div>
-            <div class="card-body">
-                <h5 class="card-title">Sistem Akademik Universitas Muhless Mahless</h5>
-                <a href="#" class="btn btn-primary">Data Mahasiswa</a>
+            <div class="card-body mt-2">
+                <h5 class="card-title">Data Mahasiswa Kelas B1-B2</h5>
+                <a href="#" class="btn btn-primary mt-3">
+                <i class="fa-solid fa-plus"></i>
+                Tambah Data</a>
             </div>
         </div>
         <!--  -->
@@ -54,7 +61,7 @@
                             <td>Teknik Informatika</td>
                             <td>Kp. Kelapa Dua, Tangerang</td>
                             <td>
-                                <a type="button" class="btn btn-success">
+                                <a href="kelola.php" type="button" class="btn btn-success">
                                     <i class="fa-solid fa-pen"></i>
                                 </a>
                                 <a type="button" class="btn btn-danger">
