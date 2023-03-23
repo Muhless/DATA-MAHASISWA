@@ -96,12 +96,10 @@ $sql = mysqli_query($conn, $query);
                                 <td>
                                     <center>
                                         <a href="kelola.php?ubah=<?php echo $result['id_siswa'];
-                                        ?>" type="button" class="btn btn-success">
-                                            <i class="fa-solid fa-pen"></i>
+                                        ?>" type="button" class="btn btn-success"><i class="fa-solid fa-pen"></i>
                                         </a>
                                         <a href="kelola.php?hapus=<?php echo $result['id_siswa'];
-                                        ?>" type=" button" class="btn btn-danger">
-                                            <i class="fa-solid fa-trash"></i>
+                                        ?>" type=" button" class="btn btn-danger"><i class="fa-solid fa-trash"></i>
                                         </a>
                                     </center>
                                 </td>
