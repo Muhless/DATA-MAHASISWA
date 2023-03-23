@@ -1,5 +1,9 @@
 <?php
-require "koneksi.php";
+include 'function.php';
+
+$no = 0;
+$query = "SELECT * FROM `kelas_b1-b2`;";
+$sql = mysqli_query($conn, $query);
 ?>
 
 
@@ -33,8 +37,8 @@ require "koneksi.php";
             <div class="card-body mt-2">
                 <h5 class="card-title">Data Mahasiswa Kelas B1-B2</h5>
                 <a href="#" class="btn btn-primary mt-3">
-                <i class="fa-solid fa-plus"></i>
-                Tambah Data</a>
+                    <i class="fa-solid fa-plus"></i>
+                    Tambah Data</a>
             </div>
         </div>
         <!--  -->
@@ -53,38 +57,54 @@ require "koneksi.php";
                         <th>Aksi</th>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1.</td>
-                            <td>2155201049</td>
-                            <td>Raka Dwi Rengganis</td>
-                            <td>Laki-Laki</td>
-                            <td>Teknik Informatika</td>
-                            <td>Kp. Kelapa Dua, Tangerang</td>
-                            <td>
-                                <a href="kelola.php" type="button" class="btn btn-success">
-                                    <i class="fa-solid fa-pen"></i>
-                                </a>
-                                <a type="button" class="btn btn-danger">
-                                    <i class="fa-solid fa-trash"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2.</td>
-                            <td>2155201050</td>
-                            <td>Muhammad Rizky Ramadhan</td>
-                            <td>Laki-Laki</td>
-                            <td>Teknik Informatika</td>
-                            <td>Citra Raya, Tangerang</td>
-                            <td>
-                                <a type="button" class="btn btn-success">
-                                    <i class="fa-solid fa-pen"></i>
-                                </a>
-                                <a type="button" class="btn btn-danger">
-                                    <i class="fa-solid fa-trash"></i>
-                                </a>
-                            </td>
-                        </tr>
+                        <?php
+                        while ($result = mysqli_fetch_assoc($sql)) {
+                        ?>
+                            <tr>
+                                <td>
+                                    <center>
+                                        <?php
+                                        echo ++$no;
+                                        ?>
+                                    </center>
+                                </td>
+                                <td>
+                                    <?php
+                                    echo $result['nim'];
+                                    ?>
+                                </td>
+                                <td>
+                                    <?php
+                                    echo $result['nama'];
+                                    ?>
+                                </td>
+                                <td>
+                                    <?php
+                                    echo $result['jenis_kelamin']
+                                    ?>
+                                </td>
+                                <td>
+                                    <?php
+                                    echo $result['jurusan']
+                                    ?>
+                                </td>
+                                <td>
+                                    <?php
+                                    echo $result['alamat']
+                                    ?>
+                                </td>
+                                <td>
+                                    <a href="kelola.php" type="button" class="btn btn-success">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </a>
+                                    <a type="button" class="btn btn-danger">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        <?php
+                        }
+                        ?>
                     </tbody>
                 </table>
             </div>
