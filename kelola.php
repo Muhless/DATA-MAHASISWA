@@ -11,29 +11,26 @@
 </head>
 
 <body>
-    <form action="" method="$_POST">
         <div class="container">
             <!-- body -->
             <div class="card mt-3">
-                <div class="card-header">
-                    <nav class="navbar bg-body-tertiary">
-                        <div class="container-fluid">
-                            <a class="navbar-brand">Data Mahasiswa Universitas Muhammadiyah Tangerang</a>
-                            <form class="d-flex" role="search">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success" type="submit">Cari</button>
-                            </form>
-                        </div>
-                    </nav>
+                <div class="card-body mt-2">
+                    <h5 class="card-title">Data Mahasiswa Kelas B1-B2</h5>
+                    <!-- <a href="kelola.php" class="btn btn-primary mt-3">
+                        <i class="fa-solid fa-plus"></i>
+                        Tambah Data</a> -->
                 </div>
             </div>
         </div>
 
+
+
+        <form action="proses.php" method="POST">
         <div class="container mt-4">
             <div class="mb-3 row">
                 <label for="nim" class="col-sm-2 col-form-label">NIM</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="nisn" name="nim" placeholder="Silahkan ketikkan NIM anda">
+                    <input type="text" class="form-control" id="nim" name="nim" placeholder="Silahkan ketikkan NIM anda">
                 </div>
             </div>
 
@@ -75,15 +72,31 @@
                 </div>
             </div>
 
-            <a href="index.php" type="button" class="btn btn-primary">
-                <i class="fa-solid fa-floppy-disk"></i>
-                Simpan Perubahan
-            </a>
+            <div>
+                <?php
+                if (isset($_GET['ubah'])) {
 
-            <a href="index.php" type="button" class="btn btn-danger">
-                <i class="fa-solid fa-reply"></i>
-                Batal
-            </a>
+                ?>
+                    <button type="submit" type="button" name="aksi" value="edit" class="btn btn-primary">
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        Simpan Perubahan
+                    </button>
+                <?php
+                } else {
+                ?>
+                    <button type="submit" type="button" name="aksi" value="add" class="btn btn-primary">
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        Tambahkan Data
+                    </button>
+                <?php
+                }
+                ?>
+
+                <a href="index.php" type="button" class="btn btn-danger">
+                    <i class="fa-solid fa-reply"></i>
+                    Batal
+                </a>
+            </div>
 
         </div>
     </form>
