@@ -1,8 +1,8 @@
 <?php
-include 'function.php';
+include 'koneksi.php';
 
 $no = 0;
-$query = "SELECT * FROM `kelas_b1-b2`;";
+$query = "SELECT * FROM `kelas_b`;";
 $sql = mysqli_query($conn, $query);
 ?>
 
@@ -36,7 +36,7 @@ $sql = mysqli_query($conn, $query);
             </div>
             <div class="card-body mt-2">
                 <h5 class="card-title">Data Mahasiswa Kelas B1-B2</h5>
-                <a href="#" class="btn btn-primary mt-3">
+                <a href="kelola.php" class="btn btn-primary mt-3">
                     <i class="fa-solid fa-plus"></i>
                     Tambah Data</a>
             </div>
@@ -94,12 +94,16 @@ $sql = mysqli_query($conn, $query);
                                     ?>
                                 </td>
                                 <td>
-                                    <a href="kelola.php" type="button" class="btn btn-success">
-                                        <i class="fa-solid fa-pen"></i>
-                                    </a>
-                                    <a type="button" class="btn btn-danger">
-                                        <i class="fa-solid fa-trash"></i>
-                                    </a>
+                                    <center>
+                                        <a href="kelola.php?ubah=<?php echo $result['id_siswa'];
+                                        ?>" type="button" class="btn btn-success">
+                                            <i class="fa-solid fa-pen"></i>
+                                        </a>
+                                        <a href="kelola.php?hapus=<?php echo $result['id_siswa'];
+                                        ?>" type=" button" class="btn btn-danger">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </a>
+                                    </center>
                                 </td>
                             </tr>
                         <?php
