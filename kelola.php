@@ -25,7 +25,7 @@
 
 
 
-    <form action="proses.php" method="POST">
+    <form action="proses.php" method="POST" enctype="multipart/form-data">
         <div class="container mt-4">
             <div class="mb-3 row">
                 <label for="nim" class="col-sm-2 col-form-label">NIM</label>
@@ -44,7 +44,7 @@
             <div class="mb-3 row">
                 <label for="kelamin" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                 <div class="col-sm-10">
-                    <select class="form-select" aria-label="Default select example" id="kelamin" name="kelamin">
+                    <select class="form-select" aria-label="Default select example" id="kelamin" name="jenis_kelamin">
                         <option selected>-Jenis Kelamin-</option>
                         <option value="laki-laki">Laki-Laki</option>
                         <option value="perempuan">Perempuan</option>
@@ -52,15 +52,15 @@
                 </div>
             </div>
 
+            <!-- foto -->
             <div class="mb-3 row">
                 <label for="foto" class="col-sm-2 col-form-label">Foto</label>
                 <div class="col-sm-10">
-                    <div class="mb-3">
-                        <input class="form-control" type="file" id="foto" name="foto">
-                    </div>
+                    <input class="form-control" type="file" id="foto" name="foto">
                 </div>
             </div>
 
+            <!-- alamat -->
             <div class="mb-3 row">
                 <label for="alamat" class="col-sm-2 col-form-label">Alamat Lengkap</label>
                 <div class="col-sm-10">

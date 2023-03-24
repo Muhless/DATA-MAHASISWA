@@ -84,9 +84,10 @@ $sql = mysqli_query($conn, $query);
                                     ?>
                                 </td>
                                 <td>
+                                    <img src="img/
                                     <?php
-                                    echo $result['jurusan']
-                                    ?>
+                                    echo $result['foto']
+                                    ?>" style="width: 50px">
                                 </td>
                                 <td>
                                     <?php
@@ -96,10 +97,10 @@ $sql = mysqli_query($conn, $query);
                                 <td>
                                     <center>
                                         <a href="kelola.php?ubah=<?php echo $result['id_siswa'];
-                                        ?>" type="button" class="btn btn-success"><i class="fa-solid fa-pen"></i>
+                                                                    ?>" type="button" class="btn btn-success"><i class="fa-solid fa-pen"></i>
                                         </a>
-                                        <a href="kelola.php?hapus=<?php echo $result['id_siswa'];
-                                        ?>" type=" button" class="btn btn-danger"><i class="fa-solid fa-trash"></i>
+                                        <a href="proses.php?hapus=<?php echo $result['id_siswa'];
+                                                                    ?>" type=" button" class="btn btn-danger"><i class="fa-solid fa-trash"></i>
                                         </a>
                                     </center>
                                 </td>
