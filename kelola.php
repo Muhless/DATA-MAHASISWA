@@ -11,21 +11,21 @@
 </head>
 
 <body>
-        <div class="container">
-            <!-- body -->
-            <div class="card mt-3">
-                <div class="card-body mt-2">
-                    <h5 class="card-title">Data Mahasiswa Kelas B1-B2</h5>
-                    <!-- <a href="kelola.php" class="btn btn-primary mt-3">
+    <div class="container">
+        <!-- body -->
+        <div class="card mt-3">
+            <div class="card-body mt-2">
+                <h5 class="card-title">Data Mahasiswa Kelas B1-B2</h5>
+                <!-- <a href="kelola.php" class="btn btn-primary mt-3">
                         <i class="fa-solid fa-plus"></i>
                         Tambah Data</a> -->
-                </div>
             </div>
         </div>
+    </div>
 
 
 
-        <form action="proses.php" method="POST">
+    <form action="proses.php" method="POST">
         <div class="container mt-4">
             <div class="mb-3 row">
                 <label for="nim" class="col-sm-2 col-form-label">NIM</label>
@@ -53,15 +53,11 @@
             </div>
 
             <div class="mb-3 row">
-                <label for="jurusan" class="col-sm-2 col-form-label">Jurusan</label>
+                <label for="foto" class="col-sm-2 col-form-label">Foto</label>
                 <div class="col-sm-10">
-                    <select class="form-select" aria-label="Default select example" id="jurusan" name="jurusan">
-                        <option selected>-Jurusan-</option>
-                        <option value="teknik-informatika">Teknik Informatika</option>
-                        <option value="teknik-industri">Teknik Industri</option>
-                        <option value="teknik-mesin">Teknik Mesin</option>
-                        <option value="teknik-elektro">Teknik Elektro</option>
-                    </select>
+                    <div class="mb-3">
+                        <input class="form-control" type="file" id="foto" name="foto">
+                    </div>
                 </div>
             </div>
 
