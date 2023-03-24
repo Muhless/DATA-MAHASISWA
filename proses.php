@@ -47,6 +47,9 @@ if (isset($_GET['hapus'])) {
     $sqlShow = mysqli_query($conn, $queryShow);
     $result = mysqli_fetch_assoc($sqlShow);
 
+var_dump($result);
+die();
+
     unlink("img/".$result['foto']);
 
     $query = "DELETE FROM kelas_b WHERE id_siswa = '$id_siswa';";
