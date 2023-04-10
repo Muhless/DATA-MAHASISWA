@@ -24,8 +24,3 @@ include "config/app.php";
 </nav>
 
 
-</body>
-
-</html>
-
-<?php include "footer.php"; ?>
