@@ -18,29 +18,32 @@ $id_siswa = select("SELECT * FROM kelas_b");
 <div class="container mt-3">
     <table class="table table-striped table-bordered table-hover">
         <thead>
-            <th>No</th>          
-            <th>NISN</th> 
-            <th>Nama</th>          
-            <th>Jenis Kelamin</th>          
-            <th>Foto</th>          
-            <th>Alamat</th>        
-            <th>aksi</th>  
+            <th>No</th>
+            <th>NIM</th>
+            <th>Nama</th>
+            <th>Jenis Kelamin</th>
+            <th>Foto</th>
+            <th>Alamat</th>
+            <th>aksi</th>
         </thead>
         <tbody>
             <?php $no = 1; ?>
-            <?php foreach($id_siswa as $siswa) : ?>
+            <?php foreach ($id_siswa as $siswa) : ?>
                 <tr>
                     <td><?= $no++ ?></td>
                     <td><?= $siswa['nim']; ?></td>
                     <td><?= $siswa['nama']; ?></td>
                     <td><?= $siswa['jenis_kelamin']; ?></td>
-                    <td><?= $siswa['foto']; ?></td>
+                    <td style="width: 20%;">
+                        <a href="assets/img/<?php echo $siswa['foto']; ?>">
+                            <img src="assets/img/<?php echo $siswa['foto']; ?>" alt="foto" width="30%">
+                    </td>
                     <td><?= $siswa['alamat']; ?></td>
                     <td class="text-center" style="width:15%">
                         <a class="btn btn-success">Edit</a>
                         <button class="btn btn-danger">Hapus</button>
                     </td>
-                    
+
                 </tr>
             <?php endforeach;  ?>
         </tbody>
