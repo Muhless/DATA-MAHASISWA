@@ -16,7 +16,7 @@ include "config/app.php";
     
 <nav class="navbar bg-body-tertiary container mt-3">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="index.php">
       <img src="assets/img/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
       UNIVERSITAS MUHAMMADIYAH TANGERANG
     </a>
