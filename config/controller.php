@@ -38,6 +38,19 @@ function tambah_data($post)
 }
 
 
+// fungsi delete data
+function delete_data($id_siswa){
+    global $db;
+
+    $query = "DELETE FROM kelas_b WHERE id_siswa = $id_siswa";
+
+    mysqli_query($db, $query);
+
+    return mysqli_affected_rows($db);
+}
+
+
+
 // fungsi upload file
 function upload_file()
 {
