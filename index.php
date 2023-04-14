@@ -16,7 +16,7 @@ $id_siswa = select("SELECT * FROM kelas_b");
 </div>
 
 <div class="container mt-3">
-    <table class="table table-striped table-bordered table-hover">
+    <table class="table table-striped table-bordered table-hover" id="table">
         <thead>
             <th>No</th>
             <th>NIM</th>
@@ -40,8 +40,8 @@ $id_siswa = select("SELECT * FROM kelas_b");
                     </td>
                     <td><?= $siswa['alamat']; ?></td>
                     <td class="text-center" style="width:15%">
-                        <a class="btn btn-success">Edit</a>
-                        <button class="btn btn-danger">Hapus</button>
+                        <a href="edit-data.php?id_siswa=<?= $siswa['id_siswa']; ?>" class="btn btn-success">Edit</a>
+                        <a href="hapus-data.php?id_siswa=<?= $siswa['id_siswa'];?>" class="btn btn-danger" onclick="return confirm('Yakin ingin menghapus data ?')">Hapus</a>
                     </td>
 
                 </tr>

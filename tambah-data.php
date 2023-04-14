@@ -27,7 +27,6 @@ if(isset($_POST['tambah'])){
     </div>
 </div>
 
-<div class="container mt-2">
     <form action="" method="post" enctype="multipart/form-data">
 
         <div class="container mt-2">
@@ -42,10 +41,10 @@ if(isset($_POST['tambah'])){
 
         <div class="container mt-2">
             <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
-            <select name="jenis_kelamin" class="form-select" id="jenis_kelamin" required>
+            <select name="jenis_kelamin" class="form-control" id="jenis_kelamin" required>
                 <option value="">Pilih Jenis Kelamin...</option>
-                <option value="1">Laki-Laki</option>
-                <option value="2">Perempuan</option>
+                <option value="Laki-Laki">Laki-Laki</option>
+                <option value="Perempuan">Perempuan</option>
             </select>
         </div>
 
